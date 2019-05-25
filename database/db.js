@@ -1,10 +1,10 @@
-const Sequilize = require("sequelize");
+const Sequelize = require("sequelize")
 const db = {}
-const sequilize = new Sequilize("dev_geopoints", "root", "", {
+const sequelize = new Sequelize("dev_geopoints", "root", "", {
   host: "localhost",
   dialect: "mysql",
   operatorsAliases: false,
-  pool:{
+  pool: {
     max: 5,
     min: 0,
     acquire: 30000,
@@ -12,7 +12,15 @@ const sequilize = new Sequilize("dev_geopoints", "root", "", {
   }
 })
 
-db.sequilize = sequilize;
-db.Sequilize = Sequilize;
+// sequelize.authenticate()
+//   .then(() => {
+//     console.log('Conectado')
+//   })
+//   .catch(err => {
+//     console.log('No se conecto')
+//   })
 
-module.exports = db;
+db.sequelize = sequelize
+db.Sequelize = Sequelize
+
+module.exports = db

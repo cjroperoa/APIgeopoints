@@ -1,7 +1,7 @@
-const Sequelize = require("sequelize")
+const Sequelize = require('sequelize')
 const db = require("../database/db.js")
 
-module.export = db.sequilize.define(
+module.exports = db.sequelize.define(
   'user',
   {
     id: {
@@ -10,23 +10,22 @@ module.export = db.sequilize.define(
       autoIncrement: true
     },
     name: {
-      type: Sequelize.STRING,
+      type: Sequelize.STRING
     },
     mail: {
-      type: Sequelize.STRING,
+      type: Sequelize.STRING
     },
     password: {
-      type: Sequelize.STRING,
+      type: Sequelize.STRING
     },
     loc_init: {
-      type: Sequelize.GEOMETRY,
+      type: Sequelize.GEOMETRY
     },
     loc_mark1: {
-      type: Sequelize.GEOMETRY,
+      type: Sequelize.GEOMETRY
     },
-    loc_marck2: {
-      type: Sequelize.GEOMETRY,
+    loc_mark2: {
+      type: Sequelize.GEOMETRY
     }
-
   }
-);
+)
